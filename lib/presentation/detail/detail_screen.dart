@@ -9,10 +9,15 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('디테일 페이지'),
-      ),
-      body: Container(),
-    );
+        appBar: AppBar(
+          title: const Text('디테일 페이지'),
+        ),
+        body: Hero(
+          tag: photo.id,
+          child: Image.network(
+            photo.url,
+            fit: BoxFit.cover,
+          ),
+        ));
   }
 }
