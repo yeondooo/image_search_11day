@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:image_search_11day/domain/model/photo.dart';
 
 class DetailScreen extends StatelessWidget {
-  const DetailScreen({Key? key}) : super(key: key);
+  final Photo photo;
+
+  const DetailScreen({Key? key, required this.photo}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
